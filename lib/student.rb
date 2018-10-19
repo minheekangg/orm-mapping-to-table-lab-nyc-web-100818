@@ -36,7 +36,10 @@ class Student
   end
 
 
-  def self.create
+  def self.create(hash)
+    hash.each {|key, value|
+      self.send(("#{key}="), value)}
+    end
     sql = <<-SQL
     INSERT INTO students(name, grade) VALUES (?,?)
     SQL
