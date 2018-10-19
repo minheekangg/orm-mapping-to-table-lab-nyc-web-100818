@@ -38,9 +38,7 @@ class Student
 
   def self.create(hash)
 
-    new_student = Student.new
-    new_student.name = hash[:name]
-    new_student.grade = hash[:grade]
+    new_student = Student.new(student[:name], student[:grade])
 
     new_student.save
     new_student
