@@ -37,7 +37,7 @@ class Student
 
 
   def self.create(hash)
-    puts hash 
+    puts hash[:name]
 
     sql = <<-SQL
     INSERT INTO students(name, grade) VALUES (?,?)
