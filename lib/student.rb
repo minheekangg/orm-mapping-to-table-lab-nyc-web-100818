@@ -37,7 +37,10 @@ class Student
 
 
   def self.create(hash)
-    puts hash[:name]
+
+    new_student = Student.new
+    new_student.name = hash[:name]
+    new_student.grade = hash[:grade]
 
     sql = <<-SQL
     INSERT INTO students(name, grade) VALUES (?,?)
