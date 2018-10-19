@@ -43,6 +43,7 @@ class Student
     new_student.grade = hash[:grade]
 
     new_student.save
+    new_student
   end
 
 end
