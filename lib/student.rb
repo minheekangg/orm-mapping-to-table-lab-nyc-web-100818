@@ -42,10 +42,7 @@ class Student
     new_student.name = hash[:name]
     new_student.grade = hash[:grade]
 
-    sql = <<-SQL
-    INSERT INTO students(name, grade) VALUES (?,?)
-    SQL
-    DB[:conn].execute(sql, self.name, self.grade)
+    new_student.save
   end
 
 end
